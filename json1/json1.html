@@ -46,6 +46,14 @@
 
       const cats = JSON.parse(catString);
       console.log(cats);
+      for (let i = 0 ; i<cats.length-1; i++) {
+
+        motherInfo = motherInfo + cats[i].name+`, `;
+        console.log(motherInfo);
+      }
+      motherInfo = motherInfo.slice(0, -2);
+      motherInfo = motherInfo +` and `+ cats[cats.length-1].name;
+      console.log(motherInfo);
 
 
       // Don't edit the code below here!
