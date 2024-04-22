@@ -49,11 +49,15 @@
       for (let i = 0 ; i<cats.length-1; i++) {
 
         motherInfo = motherInfo + cats[i].name+`, `;
+        total = total + cats[i].kittens.length;
         console.log(motherInfo);
       }
       motherInfo = motherInfo.slice(0, -2);
       motherInfo = motherInfo +` and `+ cats[cats.length-1].name;
+      total = total + cats[cats.length-1].kittens.length;
       console.log(motherInfo);
+
+      kittenInfo = `There are in total ${total} kittens`;
 
 
       // Don't edit the code below here!
