@@ -51,13 +51,27 @@
         motherInfo = motherInfo + cats[i].name+`, `;
         total = total + cats[i].kittens.length;
         console.log(motherInfo);
+
+        for (let j = 0; j<cats[i].kittens.length; j++) {
+          if (cats[i].kittens[j].gender == 'm') {
+            male = male + 1;
+          }
+
+        }
       }
       motherInfo = motherInfo.slice(0, -2);
       motherInfo = motherInfo +` and `+ cats[cats.length-1].name;
       total = total + cats[cats.length-1].kittens.length;
       console.log(motherInfo);
 
-      kittenInfo = `There are in total ${total} kittens`;
+      for (let i = 0; i<cats[cats.length-1].kittens.length; i++) {
+          if (cats[cats.length-1].kittens[i].gender == 'm') {
+            male = male + 1;
+          }
+      }
+
+
+      kittenInfo = `There are in total ${total} kittens, ${male} of them are male, and ${total-male} are female!`;
 
 
       // Don't edit the code below here!
